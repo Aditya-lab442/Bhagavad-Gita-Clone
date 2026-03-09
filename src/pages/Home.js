@@ -13,7 +13,6 @@ function Home(){
             <div style={{color: 'white', fontWeight: 900, fontSize: '4rem'}}>Experience the Gita </div>
             <div style={{color: '#fedf89', fontWeight: 900, fontSize: '4rem'}}>Anywhere, Anytime</div>
             <Link to={"/chapter/1"} className="btn btn-light">Read now</Link>
-            <h1>Hello</h1>
           </div>
         </div>
       </section>
