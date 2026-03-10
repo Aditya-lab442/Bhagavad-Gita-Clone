@@ -4,11 +4,11 @@ function AboutGita(){
   return (
     <>
       <section>
-        <div className="banner">
-          <img src="/arjunKrishna.webp" alt="" style={{position: 'absolute', zIndex: -1, opacity: 0.95}} />
-          <div className="content">
-            <div style={{color: 'white', fontWeight: 900, fontSize: '4rem'}}>About</div>
-            <div style={{color: '#fedf89', fontWeight: 900, fontSize: '4rem'}}>Bhagavad Gita</div>
+        <div className="banner mx-auto">
+          <img src="/arjunKrishna.webp" alt="" />
+          <div className="content text-center w-100">
+            <div className="display-4 fw-bold" style={{color: 'white'}}>About</div>
+            <div className="display-4 fw-bold" style={{color: '#fedf89'}}>Bhagavad Gita</div>
           </div>
         </div>
       </section>
