@@ -27,18 +27,18 @@ function Quotes() {
   return (
     <>
       <section>
-        <div className="container banner">
+        <div className="banner mx-auto">
           <img
             src="/arjunKrishna.webp"
             alt=""
-            style={{ position: "absolute", zIndex: -1, opacity: 0.95 }}
           />
-          <div className="content">
-            <div style={{ color: "white", fontWeight: 900, fontSize: "4rem" }}>
+          <div className="content text-center w-100">
+            <div className="display-5 fw-bold" style={{ color: "white" }}>
               Bhagavad Gita Quotes By
             </div>
             <div
-              style={{ color: "#fedf89", fontWeight: 900, fontSize: "4rem" }}
+              className="display-4 fw-bold"
+              style={{ color: "#fedf89" }}
             >
               Lord Krishna
             </div>
@@ -48,15 +48,15 @@ function Quotes() {
       <section>
         <div class="container-sm mt-5 mb-5">
           <div id="carouselExample" class="carousel slide position-relative">
-            <div class="carousel-inner p-4">
-              {quote.map((quo) => {
-                <div className="carousel-item active">
+            <div className="carousel-inner p-4">
+              {quote.map((quo, index) => (
+                <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                   <p className="h5 mb-3 text-warning text-center">
                     QUOTE {quo.quote_number}
                   </p>
                   <p className="h4 text-center px-3">{quo.quote}</p>
-                </div>;
-              })}
+                </div>
+              ))}
             </div>
 
             <button
