@@ -53,16 +53,14 @@ function Chapter() {
       </section>
       <section style={{ marginTop: "20px" }}>
         <div
+          className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3"
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "20px",
             borderBottom: "2px solid rgb(215, 212, 212)",
           }}
         >
-          <h3>{data.verses_count} verses</h3>
-          <div className="serach-bar" style={{ width: "500px" }}>
-            <div className="input-group mb-3">
+          <h3 className="mb-3 mb-md-0">{data.verses_count} verses</h3>
+          <div className="search-bar w-100" style={{ maxWidth: "500px" }}>
+            <div className="input-group">
               <input
                 type="text"
                 className="form-control"
@@ -75,7 +73,7 @@ function Chapter() {
                 type="button"
                 id="button-addon2"
               >
-                <i className="fa-solid fa-sort"></i>sort
+                <i className="fa-solid fa-sort me-1"></i>sort
               </button>
             </div>
           </div>
@@ -87,17 +85,17 @@ function Chapter() {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, perferendis tenetur molestias aut officia sunt ipsam odit, similique, velit enim illo quam magni dolorum voluptatum.</p>
         </div>
       </section> */}
-      <div className="row">
+      <div className="row g-4 mb-5">
       {verses.map((vr,idx) => {
         return (
-          <>
-          <div className="col-3">
-            <h5 style={{ color: 'orange'}}>VERSE {idx+1}</h5>
+          <React.Fragment key={idx}>
+          <div className="col-12 col-md-3">
+            <h5 style={{ color: 'orange', marginBottom: '0'}}>VERSE {idx+1}</h5>
           </div>
-          <div className="col-9 fw-bold">
+          <div className="col-12 col-md-9 fw-bold fs-5" style={{lineHeight: '1.6'}}>
             {vr.text}
           </div>
-          </>
+          </React.Fragment>
         )
       })}
       </div>
